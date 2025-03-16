@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import { Footer } from "./components/layout/footer";
 import { Navbar } from "./components/layout/navbar";
 import { DotPatternBox } from "./components/magicui/DotPatternBox";
@@ -12,6 +13,10 @@ import Animated from "./components/ui/Animated";
 function App() {
   return (
     <div className="min-h-screen bg-background">
+      <div className="z-[100] fixed right-4 top-4">
+        <Toaster position="top-right" reverseOrder={true} />
+      </div>
+
       <div
         className="fixed bottom-5 right-4 md:bottom-10 md:right-10 cursor-pointer z-50"
         onClick={() => window.open("https://wa.link/833iq5", "_blank")}

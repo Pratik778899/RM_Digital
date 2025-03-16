@@ -1,5 +1,54 @@
+import { useState } from "react";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 const Contact = () => {
+  const [formData, setFormData] = useState<any>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e: any) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    const payload = {
+      Name: `${formData.firstName} ${formData.lastName}`,
+      Email: formData.email,
+      ContactNo: formData.phone,
+      Message: formData.message,
+    };
+
+    try {
+      if (
+        formData.firstName === "" ||
+        formData.lastName === "" ||
+        formData.email === "" ||
+        formData.phone === "" ||
+        formData.message === ""
+      ) {
+        toast.error("Please fill all the fields");
+        return;
+      }
+      setLoading(true);
+      await axios.post(
+        "https://localhost:7019/api/RLMedia/SubmitInquiry",
+        payload
+      );
+      setLoading(false);
+      toast.success("Message Submitted Successfully");
+    } catch (error) {
+      setLoading(false);
+      toast.error("Error submitting form:");
+    }
+  };
+
   return (
     <div
       id="contact"
@@ -30,6 +79,10 @@ const Contact = () => {
               </label>
               <input
                 type="text"
+                name="firstName"
+                value={formData.firstName}
+                required
+                onChange={handleChange}
                 className="w-full bg-transparent p-2 rounded-md border border-gray-300"
                 placeholder="Enter your first name"
               />
@@ -40,6 +93,10 @@ const Contact = () => {
               </label>
               <input
                 type="text"
+                name="lastName"
+                value={formData.lastName}
+                required
+                onChange={handleChange}
                 className="w-full bg-transparent p-2 rounded-md border border-gray-300"
                 placeholder="Enter your last name"
               />
@@ -52,6 +109,10 @@ const Contact = () => {
               <label className="block text-white font-medium">Email *</label>
               <input
                 type="email"
+                name="email"
+                value={formData.email}
+                required
+                onChange={handleChange}
                 className="w-full bg-transparent p-2 rounded-md border border-gray-300"
                 placeholder="Enter your email"
               />
@@ -60,6 +121,10 @@ const Contact = () => {
               <label className="block text-white font-medium">Phone</label>
               <input
                 type="tel"
+                name="phone"
+                value={formData.phone}
+                required
+                onChange={handleChange}
                 className="w-full bg-transparent p-2 rounded-md border border-gray-300"
                 placeholder="Enter your phone number"
               />
@@ -70,6 +135,10 @@ const Contact = () => {
           <div>
             <label className="block text-white font-medium">Message</label>
             <textarea
+              name="message"
+              value={formData.message}
+              required
+              onChange={handleChange}
               className="w-full p-2 rounded-md border bg-transparent border-gray-300"
               rows={4}
               placeholder="Enter your message"
@@ -79,10 +148,12 @@ const Contact = () => {
           {/* Submit Button */}
           <div className="flex">
             <button
+              onClick={handleSubmit}
               type="submit"
+              disabled={loading}
               className="bg-white text-black px-6 py-2 rounded-full font-medium flex-1 hover:bg-gray-200 transition"
             >
-              Submit
+              {loading ? "Submitting..." : "Submit"}
             </button>
           </div>
         </form>
