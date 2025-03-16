@@ -1,4 +1,4 @@
-import {  Linkedin, Mail, MapPin, Phone, Instagram } from "lucide-react";
+import {  Linkedin, Mail, Phone, Instagram } from "lucide-react";
 import { MeteorsWrapper } from "../ui/Metors";
 
 export function Footer() {
@@ -138,7 +138,7 @@ export function Footer() {
               <h4 className="font-semibold mb-4">Contact Us</h4>
               <ul className="space-y-4">
                 <li className="flex items-center space-x-2">
-                  <MapPin className="h-5 w-5 text-primary" />
+                  {/* <MapPin className="h-5 w-5 text-primary" /> */}
                   <span className="text-muted-foreground">
                     Shop No. 8, Park Paradise, Opp Raheja Windermare, Oshiwara
                     400053 Mumbai, Mhada Colony, Andheri West, Mumbai,
