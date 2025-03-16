@@ -14,7 +14,7 @@ export function Footer() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
             {/* Company Info */}
-            <div className="space-y-4">
+            <div className="space-y-4"> 
               <h3 className="text-2xl font-medium">RL Marketing Hub</h3>
               {/* <p className="text-muted-foreground">
                 Digital Strategies for the AI Age.
