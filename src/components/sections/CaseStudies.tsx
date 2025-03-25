@@ -1,4 +1,5 @@
 import Text from "../ui/Text";
+import FameStudioLogo from "../../assets/fameLogo.png"
 
 const caseStudies = [
   {
@@ -74,7 +75,7 @@ const CaseStudies = () => {
                   {/* Left Side */}
                   <div className="flex flex-col gap-8 md:gap-32 w-full">
                     <div className="flex items-center gap-4 md:gap-7 justify-start md:justify-start">
-                      <svg
+                      {/* <svg
                         preserveAspectRatio="none"
                         data-bbox="20 20 160 160"
                         viewBox="20 20 160 160"
@@ -148,7 +149,8 @@ const CaseStudies = () => {
                           <path d="M112.667 20v5.333H107.6V20h5.067z"></path>
                           <path d="M122.8 174.667V180h-5.067v-5.333h5.067z"></path>
                         </g>
-                      </svg>
+                      </svg> */}
+                      <img src={FameStudioLogo} alt="Fame Studio Logo" className="w-12 h-12 object-cover" />
                       <h3 className="text-2xl md:text-4xl font-semibold text-gray-900">
                         {study.company}
                       </h3>

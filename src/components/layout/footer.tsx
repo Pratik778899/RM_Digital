@@ -1,4 +1,11 @@
-import {  Linkedin, Mail, Phone, Instagram } from "lucide-react";
+import {
+  Linkedin,
+  Mail,
+  Phone,
+  Instagram,
+  Twitter,
+  Facebook,
+} from "lucide-react";
 import { MeteorsWrapper } from "../ui/Metors";
 
 export function Footer() {
@@ -14,35 +21,39 @@ export function Footer() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
             {/* Company Info */}
-            <div className="space-y-4"> 
+            <div className="space-y-4">
               <h3 className="text-2xl font-medium">RL Marketing Hub</h3>
               {/* <p className="text-muted-foreground">
                 Digital Strategies for the AI Age.
               </p> */}
               <div className="flex space-x-4">
-                {/* <a
-                  href="#"
-                  className="text-muted-foreground hover:text-primary"
-                >
-                  <Github className="h-5 w-5" />
-                </a> */}
-                {/* <a
-                  href="#"
+                <a
+                  href="https://twitter.com/explore"
+                  target="_blank"
                   className="text-muted-foreground hover:text-primary"
                 >
                   <Twitter className="h-5 w-5" />
-                </a> */}
+                </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/rl-marketing-hub/about/"
+                  target="_blank"
                   className="text-muted-foreground hover:text-primary"
                 >
                   <Linkedin className="h-5 w-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/"
+                  target="_blank"
                   className="text-muted-foreground hover:text-primary"
                 >
                   <Instagram className="h-5 w-5" />
+                </a>
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  <Facebook className="h-5 w-5" />
                 </a>
               </div>
             </div>
@@ -130,6 +141,14 @@ export function Footer() {
                     Logo Design
                   </button>
                 </li>
+                <li>
+                  <button
+                    onClick={() => handleStateRefresh("services")}
+                    className="text-muted-foreground hover:text-primary"
+                  >
+                    Performance Marketing
+                  </button>
+                </li>
               </ul>
             </div>
 
@@ -178,7 +197,8 @@ export function Footer() {
 
           <div className="mt-16 border-t border-border pt-8">
             <p className="text-center text-sm text-muted-foreground">
-              © {new Date().getFullYear()} RL Marketing Hub. All rights reserved.
+              © {new Date().getFullYear()} RL Marketing Hub. All rights
+              reserved.
             </p>
           </div>
         </div>

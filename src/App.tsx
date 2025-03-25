@@ -9,6 +9,7 @@ import Home from "./components/sections/Home";
 import Services from "./components/sections/Services";
 import Testimonials from "./components/sections/Testrimonial";
 import Animated from "./components/ui/Animated";
+import WhatsappLogo from "@/assets/whatsapp.png";
 
 function App() {
   return (
@@ -19,10 +20,10 @@ function App() {
 
       <div
         className="fixed bottom-5 right-4 md:bottom-10 md:right-10 cursor-pointer z-50"
-        onClick={() => window.open("https://wa.link/833iq5", "_blank")}
+        onClick={() => window.open("https://wa.link/xp4e8t", "_blank")}
       >
         <img
-          src="https://imgs.search.brave.com/-QrW9FmSc6g53Gwf_qHvd90sRHGman2py0Cuf90eEoo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMtMDAuaWNvbmR1/Y2suY29tL2Fzc2V0/cy4wMC93aGF0c2Fw/cC1pY29uLTE5Nzd4/MjA0OC02bGNubXlt/bC5wbmc"
+          src={WhatsappLogo}
           alt="whatsapp"
           className="h-14 w-14 md:h-16 md:w-16 rounded-full drop-shadow-2xl"
         />
