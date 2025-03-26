@@ -9,7 +9,7 @@ import Home from "./components/sections/Home";
 import Services from "./components/sections/Services";
 import Testimonials from "./components/sections/Testrimonial";
 import Animated from "./components/ui/Animated";
-import WhatsappLogo from "@/assets/whatsapp.png";
+import WhatsappLogo from "@/assets/whatsappRBG.png";
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
         <img
           src={WhatsappLogo}
           alt="whatsapp"
-          className="h-14 w-14 md:h-16 md:w-16 rounded-full drop-shadow-2xl"
+          className="h-14 w-14 md:h-16 md:w-16 drop-shadow-2xl rounded-xl bg-white"
         />
       </div>
       <Navbar />

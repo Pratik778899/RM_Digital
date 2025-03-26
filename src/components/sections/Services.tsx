@@ -11,7 +11,7 @@ const servicesData = {
       ],
     },
     {
-      title: "Website Design – Your Digital Storefront, Built to Impress.",
+      title: "Website Development / Design – Your Digital Storefront, Built to Impress.",
       description: [
         "Custom, responsive website designs for all devices.",
         "Speed-optimized for better UX & SEO rankings.",
