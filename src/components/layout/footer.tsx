@@ -114,15 +114,7 @@ export function Footer() {
                     onClick={() => handleStateRefresh("services")}
                     className="text-muted-foreground hover:text-primary"
                   >
-                    SEO - Get Found
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => handleStateRefresh("services")}
-                    className="text-muted-foreground hover:text-primary"
-                  >
-                    Email Marketing
+                    Logo Design
                   </button>
                 </li>
                 <li>
@@ -138,7 +130,7 @@ export function Footer() {
                     onClick={() => handleStateRefresh("services")}
                     className="text-muted-foreground hover:text-primary"
                   >
-                    Logo Design
+                    Performance Marketing
                   </button>
                 </li>
                 <li>
@@ -146,7 +138,15 @@ export function Footer() {
                     onClick={() => handleStateRefresh("services")}
                     className="text-muted-foreground hover:text-primary"
                   >
-                    Performance Marketing
+                    Email Marketing
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => handleStateRefresh("services")}
+                    className="text-muted-foreground hover:text-primary"
+                  >
+                    SEO - Get Found
                   </button>
                 </li>
               </ul>

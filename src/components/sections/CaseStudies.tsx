@@ -57,7 +57,7 @@ const CaseStudies = () => {
       >
         Success Stories
       </Text>
-      <h2 className="text-2xl md:text-3xl font-medium text-gray-900 mb-12 w-full md:w-[75vw]">
+      <h2 className="text-2xl md:text-3xl text-gray-900 mb-12 w-full md:w-[75vw]">
         Every big success starts with a single breakthrough. We’ve already
         helped businesses transform their digital presence, and this is just the
         beginning. Our latest success story showcases how the right
