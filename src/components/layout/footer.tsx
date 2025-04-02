@@ -120,9 +120,9 @@ export function Footer() {
                 <li>
                   <button
                     onClick={() => handleStateRefresh("services")}
-                    className="text-muted-foreground hover:text-primary"
+                    className="text-muted-foreground hover:text-primary text-start"
                   >
-                    Website Development / Design
+                    Website Development  /  Design 
                   </button>
                 </li>
                 <li>
