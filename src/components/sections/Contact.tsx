@@ -19,10 +19,11 @@ const Contact = () => {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     const payload = {
-      Name: `${formData.firstName} ${formData.lastName}`,
-      Email: formData.email,
-      ContactNo: formData.phone,
-      Message: formData.message,
+      FirstName: formData?.firstName,
+      LastName: formData?.lastName,
+      Email: formData?.email,
+      ContactNo: formData?.phone,
+      Message: formData?.message,
     };
 
     try {
@@ -38,7 +39,7 @@ const Contact = () => {
       }
       setLoading(true);
       await axios.post(
-        "https://localhost:7019/api/RLMedia/SubmitInquiry",
+        "https://inndiroots.com/CRM/api/Home/RLInquiry",
         payload
       );
       setLoading(false);
@@ -83,7 +84,7 @@ const Contact = () => {
                 value={formData.firstName}
                 required
                 onChange={handleChange}
-                className="w-full bg-transparent p-2 rounded-md border border-gray-300"
+                className="w-full bg-transparent p-2 rounded-md border border-gray-300 text-white"
                 placeholder="Enter your first name"
               />
             </div>
@@ -97,7 +98,7 @@ const Contact = () => {
                 value={formData.lastName}
                 required
                 onChange={handleChange}
-                className="w-full bg-transparent p-2 rounded-md border border-gray-300"
+                className="w-full bg-transparent p-2 rounded-md border border-gray-300 text-white"
                 placeholder="Enter your last name"
               />
             </div>
@@ -113,7 +114,7 @@ const Contact = () => {
                 value={formData.email}
                 required
                 onChange={handleChange}
-                className="w-full bg-transparent p-2 rounded-md border border-gray-300"
+                className="w-full bg-transparent p-2 rounded-md border border-gray-300 text-white"
                 placeholder="Enter your email"
               />
             </div>
@@ -125,7 +126,7 @@ const Contact = () => {
                 value={formData.phone}
                 required
                 onChange={handleChange}
-                className="w-full bg-transparent p-2 rounded-md border border-gray-300"
+                className="w-full bg-transparent p-2 rounded-md border border-gray-300 text-white"
                 placeholder="Enter your phone number"
               />
             </div>
@@ -139,7 +140,7 @@ const Contact = () => {
               value={formData.message}
               required
               onChange={handleChange}
-              className="w-full p-2 rounded-md border bg-transparent border-gray-300"
+              className="w-full p-2 rounded-md border bg-transparent border-gray-300 text-white"
               rows={4}
               placeholder="Enter your message"
             ></textarea>
